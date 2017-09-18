@@ -34,6 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4825704396942940}
+  - component: {fileID: 114976224914979990}
   - component: {fileID: 212365036703823844}
   - component: {fileID: 114271545727101664}
   - component: {fileID: 114321696245865136}
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1888064186878044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: -1}
+  m_LocalPosition: {x: -6.9461513, y: -0.70003045, z: -1}
   m_LocalScale: {x: 0.7798274, y: 1.0247467, z: 3.0211227}
   m_Children:
   - {fileID: 4844961129615072}
@@ -129,10 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8528ff13584fa74f8b36ecb6541a233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 8
   tr: {fileID: 4825704396942940}
   hp: 10
   initHp: 10
+  effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
 --- !u!114 &114321696245865136
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,6 +150,18 @@ MonoBehaviour:
   - {fileID: 1437593038051668}
   bullet: {fileID: 1779068225237516, guid: 7641ac68d307ac441b747b29f55c70b4, type: 2}
   FireDelay: 0.1
+--- !u!114 &114976224914979990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888064186878044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9ca4fdb6c76314eb2f7e00e6901a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextObj: {fileID: 0}
 --- !u!212 &212365036703823844
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Control : MonoBehaviour
 {
@@ -7,6 +9,7 @@ public class Player_Control : MonoBehaviour
 
     public int hp = 10;
     public int initHp = 10;
+    public GameObject effect;
 
     private void Awake()
     {
@@ -39,7 +42,6 @@ public class Player_Control : MonoBehaviour
         }
         // 매 프레임마다 메소드 호출
         Move();
-
         
     }
     // 움직이는 기능을 하는 메소드
@@ -72,7 +74,9 @@ public class Player_Control : MonoBehaviour
             hp--;
             if (hp <= 0)
             {
-                Debug.Log("PlayerDie");
+                Instantiate(effect, tr.position, Quaternion.identity);
+                Destroy(this.gameObject);
+
             }
         }
     }
