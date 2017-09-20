@@ -90,20 +90,23 @@
     <Compile Include="Assets\04.Scripts\Play\practice\Enemy_Data.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Enemy_Fire.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Enemy_Missile_Move.cs" />
-    <Compile Include="Assets\04.Scripts\Play\practice\GameManager.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\MemoryPool.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\MoveBackground.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Player_Fire.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Player_Missile_Move.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\BossMoveControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\BulletControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Enemy_BulletControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Enemy_Control.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Enemy_Firecontrol.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\Explosion_Control.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\FireControl.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\Manager.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\MoveControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\PauseGame.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Player_Control.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Respon_Manager.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\ShortBullet_Control.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\PressStart2P-Regular\OFL.txt" />

@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/01.Scenes/Select.unity
     guid: abbe28ebe398eff4791c0aef3a140649
   - enabled: 1
+    path: Assets/01.Scenes/Play_Yasuo.unity
+    guid: d2d6f573bfe565540a6c503b400b1e31
+  - enabled: 1
     path: Assets/01.Scenes/Help.unity
     guid: 796a2b7d95f02704ca27868c876ff61d
   - enabled: 1
     path: Assets/01.Scenes/End.unity
     guid: 4559d844a9b5c1e4d8e17290d12e9f4a
-  - enabled: 1
-    path: Assets/01.Scenes/Play.unity
-    guid: d2d6f573bfe565540a6c503b400b1e31
   - enabled: 0
     path: 
     guid: 4da9d2487336b2c4ab51c360a7b9261e

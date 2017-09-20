@@ -9,6 +9,7 @@ TagManager:
   - PlayerMissile
   - EnemyMissile
   - Fire
+  - PlayerShortMissile
   layers:
   - Default
   - TransparentFX

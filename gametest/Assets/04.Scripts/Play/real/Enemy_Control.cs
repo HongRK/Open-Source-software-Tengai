@@ -13,18 +13,23 @@ public class Enemy_Control : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.CompareTag("PlayerMissile"))
-        {
             hp--;
-            if (hp == 0)
-            {
-                //scoring
-                Instantiate(effect, tr.position, Quaternion.identity);
-                Destroy(this.gameObject);
 
-            }
+
+        if (coll.CompareTag("PlayerShortMissile"))
+            hp -= 3;
+        if (hp <= 0)
+        {
+            Manager.score += 100;
+
+            Instantiate(effect, tr.position, Quaternion.identity);
+            Destroy(this.gameObject);
+
         }
     }
-    private void Update()
+
+
+        private void Update()
     {
         if (tr.position.x < destroyXpos)
         {

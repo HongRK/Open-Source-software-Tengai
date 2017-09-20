@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tr: {fileID: 4892896084999054}
-  destroyXpos: 9
+  destroyXpos: 27
 --- !u!114 &114975647349657788
 MonoBehaviour:
   m_ObjectHideFlags: 1

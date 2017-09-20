@@ -162,7 +162,7 @@ MonoBehaviour:
   initHp: 5
   tr: {fileID: 4031369414051390}
   effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
-  destroyXpos: -9
+  destroyXpos: -27
 --- !u!212 &212029314753071728
 SpriteRenderer:
   m_ObjectHideFlags: 1

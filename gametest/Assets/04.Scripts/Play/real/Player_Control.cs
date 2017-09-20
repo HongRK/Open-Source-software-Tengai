@@ -70,14 +70,14 @@ public class Player_Control : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.CompareTag("EnemyMissile"))
-        {
             hp--;
-            if (hp <= 0)
-            {
-                Instantiate(effect, tr.position, Quaternion.identity);
-                Destroy(this.gameObject);
-
-            }
+        if (coll.CompareTag("Enemy"))
+            hp -= 2;
+        if (hp <= 0)
+        {
+            Manager.life--;
+            Instantiate(effect, tr.position, Quaternion.identity);
+            Debug.Log("Player Die");
         }
     }
 }
