@@ -10,6 +10,6 @@ public class ShortBullet_Control : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-            Destroy(this.gameObject, 0.1f);
+            Destroy(this.gameObject, 0.5f);
     }
 }

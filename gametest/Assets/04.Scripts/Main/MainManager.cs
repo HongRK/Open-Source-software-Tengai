@@ -27,4 +27,8 @@ public class MainManager : MonoBehaviour
     {
         SceneManager.LoadScene("Play_Yasuo");
     }
+	public void OnPlayShyvana()
+	{
+		SceneManager.LoadScene ("Play_Shyvana");
+	}
 }

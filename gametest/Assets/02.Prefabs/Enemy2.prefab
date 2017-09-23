@@ -165,7 +165,7 @@ MonoBehaviour:
   initHp: 5
   tr: {fileID: 4586815985346028}
   effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
-  destroyXpos: -27
+  destroyXpos: -27.9
 --- !u!114 &114881498329055604
 MonoBehaviour:
   m_ObjectHideFlags: 1

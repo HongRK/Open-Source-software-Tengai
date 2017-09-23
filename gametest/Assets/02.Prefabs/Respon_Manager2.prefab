@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4353355537987078}
-  - component: {fileID: 114678163924241256}
-  - component: {fileID: 114209459770523098}
+  - component: {fileID: 114540625242425168}
+  - component: {fileID: 114476923390765894}
   m_Layer: 0
   m_Name: Respon_Manager2
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 5, y: 0, z: 0}
---- !u!114 &114209459770523098
+--- !u!114 &114476923390765894
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextObj: {fileID: 0}
---- !u!114 &114678163924241256
+--- !u!114 &114540625242425168
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

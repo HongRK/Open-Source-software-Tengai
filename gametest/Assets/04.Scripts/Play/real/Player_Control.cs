@@ -11,6 +11,8 @@ public class Player_Control : MonoBehaviour
     public int initHp = 10;
     public GameObject effect;
 
+	Vector3 Respawn = new Vector3(-25,0,0);
+
     private void Awake()
     {
         hp = initHp;
@@ -78,6 +80,10 @@ public class Player_Control : MonoBehaviour
             Manager.life--;
             Instantiate(effect, tr.position, Quaternion.identity);
             Debug.Log("Player Die");
+			transform.position = Respawn;
+			hp = 10;
         }
     }
+		
+
 }

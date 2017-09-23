@@ -18,6 +18,8 @@ public class FireControl : MonoBehaviour {
     public AudioClip sfx;
     public AudioSource audioSource;
 
+	public Transform tr;
+	public GameObject effect;
 
     void Start()
     {
@@ -75,6 +77,7 @@ public class FireControl : MonoBehaviour {
             {
                 StartCoroutine(ShortFireCycleControl());
                 audioSource.PlayOneShot(sfx, 0.3f);
+				Instantiate(effect, tr.position, Quaternion.identity);
                 for (int i = 0; i < pos.Length; i++)
                 {
                     Debug.Log("S");
