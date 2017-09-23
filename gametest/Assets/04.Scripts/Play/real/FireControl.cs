@@ -20,19 +20,23 @@ public class FireControl : MonoBehaviour {
 
 	public Transform tr;
 	public GameObject effect;
+    public GameObject Final_Effect;
+
 
     void Start()
     {
         FireState = true;
         ShortFireState = true;
     }
-    void Update () {
-        {
-            if(FireState == true)
-                Fire();
-            if(ShortFireState == true)
-                ShortFire();
-        }
+    void Update ()
+    {   
+        if(FireState == true)
+            Fire();
+        if(ShortFireState == true)
+            ShortFire();
+        FinalFire();
+           
+        
     }
 
     void Fire()
@@ -77,14 +81,21 @@ public class FireControl : MonoBehaviour {
             {
                 StartCoroutine(ShortFireCycleControl());
                 audioSource.PlayOneShot(sfx, 0.3f);
-				Instantiate(effect, tr.position, Quaternion.identity);
+				Instantiate(effect, tr.position, Quaternion.identity); // 쇼트불렛 이펙트
                 for (int i = 0; i < pos.Length; i++)
                 {
                     Debug.Log("S");
-                    Instantiate(Shortbullet, pos[i].transform.position, pos[i].transform.rotation);                        
+                    Instantiate(Shortbullet, pos[i].transform.position, pos[i].transform.rotation); //쇼트불렛만들기
                 }
             }
 
         }
     }
+    void FinalFire()
+    {
+        if (Input.GetKeyDown("d"))        
+            Instantiate(Final_Effect, tr.position*0, Quaternion.identity); // 궁극기 이펙트
+
+    }
 }
+    
