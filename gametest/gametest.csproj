@@ -107,9 +107,11 @@
     <Compile Include="Assets\04.Scripts\Play\real\FireControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Manager.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\MoveControl.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\MoveControl_Vertical.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\PauseGame.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Player_Control.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Respon_Manager.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\Respon_Manager_Vertical.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\ShortBullet_Control.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\yasuo_effect_control.cs" />
   </ItemGroup>
