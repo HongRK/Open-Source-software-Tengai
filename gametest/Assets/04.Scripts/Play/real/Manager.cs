@@ -20,11 +20,16 @@ public class Manager : MonoBehaviour
     void Awake()
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep; // 핸드폰 화면 안꺼지게
-        Screen.SetResolution(600, 1024, true); // 화면 해상도 고정
+        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, true); // 화면 해상도 16:9
+
+
+
     }
-    // Use this for initialization
-    void Start()
+                 // Use this for initialization
+        void Start()
     {
+        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, true); // 화면 해상도 16:9
+
         TimeSpan = 0.0f;
         CheckTime = 5.0f;
         state = true;

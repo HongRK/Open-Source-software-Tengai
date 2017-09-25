@@ -158,7 +158,7 @@ MonoBehaviour:
   pos:
   - {fileID: 1166912432807564}
   bullet: {fileID: 1893067893675624, guid: 38aa251df9c78b34aaf4e13d8cc10950, type: 2}
-  FireDelay: 0.5
+  FireDelay: 0.9
 --- !u!114 &114933946250295424
 MonoBehaviour:
   m_ObjectHideFlags: 1

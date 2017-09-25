@@ -252,7 +252,7 @@ MonoBehaviour:
   sfx: {fileID: 8300000, guid: 7b255bfc27256f74a89b4fb5ea0a6e27, type: 3}
   audioSource: {fileID: 82805055035627846}
   tr: {fileID: 4375664963363566}
-  effect: {fileID: 1470536670611142, guid: 62017966f6052a248aca3f00ffeedc68, type: 2}
+  effect: {fileID: 1164588803374534, guid: 2a0d988aac638934c9a6f75ae163fdf5, type: 2}
   Final_Effect: {fileID: 1470536670611142, guid: 494009e59a45e4e45a5ba087fb0e3f52,
     type: 2}
 --- !u!114 &114779816989774054
