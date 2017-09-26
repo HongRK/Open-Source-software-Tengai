@@ -253,7 +253,7 @@ MonoBehaviour:
   audioSource: {fileID: 82805055035627846}
   tr: {fileID: 4375664963363566}
   effect: {fileID: 1164588803374534, guid: 2a0d988aac638934c9a6f75ae163fdf5, type: 2}
-  Final_Effect: {fileID: 1470536670611142, guid: 494009e59a45e4e45a5ba087fb0e3f52,
+  Final_Effect: {fileID: 1922605606456480, guid: a919ac4d2a34e4e48989bf4430fa7424,
     type: 2}
 --- !u!114 &114779816989774054
 MonoBehaviour:

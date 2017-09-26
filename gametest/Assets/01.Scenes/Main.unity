@@ -885,7 +885,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TENGAI
+  m_Text: KMU
 --- !u!222 &1258422947
 CanvasRenderer:
   m_ObjectHideFlags: 0
