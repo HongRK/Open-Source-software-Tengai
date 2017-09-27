@@ -47,7 +47,7 @@ public class FireControl : MonoBehaviour {
             {
                 StartCoroutine(FireCycleControl());
                 audioSource.PlayOneShot(sfx, 0.3f);
-                for (int i = 0; i < pos.Length; i++)
+				for (int i = 0; i < Player_Control.BulletStack; i++)
                 {
                     Instantiate(bullet, pos[i].transform.position, pos[i].transform.rotation);
                 }

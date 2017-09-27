@@ -10,6 +10,7 @@ public class Player_Control : MonoBehaviour
     public int hp = 10;
     public int initHp = 10;
     public GameObject effect;
+	public static int BulletStack = 1;
 
 	Vector3 Respawn = new Vector3(-25,0,0);
 
@@ -75,6 +76,11 @@ public class Player_Control : MonoBehaviour
             hp--;
         if (coll.CompareTag("Enemy"))
             hp -= 2;
+		if (coll.CompareTag ("Item"))
+			BulletStack++;
+			if (BulletStack >= 3)
+				BulletStack = 3;
+	
         if (hp <= 0)
         {
             Manager.life--;
@@ -82,6 +88,7 @@ public class Player_Control : MonoBehaviour
             Debug.Log("Player Die");
 			transform.position = Respawn;
 			hp = 10;
+			BulletStack = 1;
         }
     }
 		

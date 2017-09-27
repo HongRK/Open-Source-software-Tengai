@@ -6,7 +6,7 @@ public class Enemy_Control : MonoBehaviour {
 
     public int hp = 5;
     public int initHp = 5;
-    public Transform tr;
+	public Transform tr;
     public GameObject effect;
     public float destroyXpos;
 

@@ -19,8 +19,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4353355537987078}
-  - component: {fileID: 114540625242425168}
   - component: {fileID: 114476923390765894}
+  - component: {fileID: 114649850082686176}
   m_Layer: 0
   m_Name: Respon_Manager2
   m_TagString: Untagged
@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextObj: {fileID: 0}
---- !u!114 &114540625242425168
+--- !u!114 &114649850082686176
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -66,3 +66,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1972341391106962, guid: 1662a3a3f4a4ae343880baa570cabfb6, type: 2}
   ResponTr: {fileID: 4353355537987078}
+  Respawn_Cycle: 3
