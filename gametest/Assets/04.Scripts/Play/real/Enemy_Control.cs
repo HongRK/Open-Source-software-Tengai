@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy_Control : MonoBehaviour {
 
     public int hp = 5;
-    public int initHp = 5;
 	public Transform tr;
     public GameObject effect;
     public float destroyXpos;
@@ -17,14 +16,13 @@ public class Enemy_Control : MonoBehaviour {
 
 
         if (coll.CompareTag("PlayerShortMissile"))
-            hp -= 3;
+            hp -= 1;
+        
         if (hp <= 0)
         {
             Manager.score += 100;
-
             Instantiate(effect, tr.position, Quaternion.identity);
             Destroy(this.gameObject);
-
         }
     }
 

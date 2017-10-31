@@ -9,6 +9,7 @@ public class Respon_Manager : MonoBehaviour {
     public Transform ResponTr;
 	public float Respawn_Cycle;
 
+
 	// Use this for initialization
 	void Start ()
     {
@@ -24,6 +25,5 @@ public class Respon_Manager : MonoBehaviour {
             Instantiate(obj, ResponTr.position + new Vector3(0, Random.Range(-range, range) , 0), Quaternion.identity);
         }
     }
-	
-	
+
 }

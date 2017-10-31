@@ -4,14 +4,36 @@ using UnityEngine;
 
 public class FinalAttack_Control : MonoBehaviour {
 
-       
+    float Speed = 7.0f;
+
     void Start()
     {
-        Invoke("destroy", 1.5f);
+        destroy();
+    }
+    void Update()
+    {
+        
     }
     void destroy()
     {
-        Destroy(this.gameObject);
+        var final_animation = GameObject.FindGameObjectsWithTag("FinalAttackAnimation");
+        var short_animation = GameObject.FindGameObjectsWithTag("ShortAttackAnimation");
+        var explosion_animation = GameObject.FindGameObjectsWithTag("ExplosionAnimation");
+        var short_missile = GameObject.FindGameObjectsWithTag("PlayerShortMissile");
+        foreach (var finalani in final_animation){
+            Destroy(finalani, 1.5f);
+        }
+        foreach (var shortani in short_animation)
+        {
+            Destroy(shortani, 0.5f);
+        }
+        foreach(var exploani in explosion_animation)
+        {
+            Destroy(exploani, 0.75f);
+        }
+        foreach(var shortmissile in short_missile)
+        {
+            Destroy(shortmissile, 0.5f);
+        }
     }
-
 }

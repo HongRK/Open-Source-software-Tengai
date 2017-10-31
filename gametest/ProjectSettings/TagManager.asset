@@ -12,6 +12,9 @@ TagManager:
   - PlayerShortMissile
   - Item
   - FinalItem
+  - ShortAttackAnimation
+  - FinalAttackAnimation
+  - ExplosionAnimation
   layers:
   - Default
   - TransparentFX

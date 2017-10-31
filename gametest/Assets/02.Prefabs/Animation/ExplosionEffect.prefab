@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4714271990528202}
   - component: {fileID: 212426210187671096}
   - component: {fileID: 95071587752706892}
-  - component: {fileID: 114321108772321788}
+  - component: {fileID: 114604877267698636}
   - component: {fileID: 82031594327993048}
   m_Layer: 0
   m_Name: ExplosionEffect
-  m_TagString: Untagged
+  m_TagString: ExplosionAnimation
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114321108772321788
+--- !u!114 &114604877267698636
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -148,11 +148,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1470536670611142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d64941c8c48def446bd77deeb2848ead, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a164bd5f0adfad4c85e01a48e36957d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sfx: {fileID: 8300000, guid: 713e84a50d292b742a13cca8afd400ee, type: 3}
-  audioSource: {fileID: 82031594327993048}
 --- !u!212 &212426210187671096
 SpriteRenderer:
   m_ObjectHideFlags: 1

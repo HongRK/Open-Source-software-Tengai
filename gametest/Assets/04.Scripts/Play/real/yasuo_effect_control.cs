@@ -3,20 +3,7 @@ using System.Collections;
 
 public class yasuo_effect_control : MonoBehaviour
 {
-	public float Speed = 7f;
-	public AudioClip Sfx;
-	public AudioSource audioSource;
-
-
-	void Start ()
-	{
-		audioSource.PlayOneShot(Sfx, 0.9f);
-		Invoke("destroy", 0.75f);
-	}
-	void destroy()
-	{    
-		Destroy(this.gameObject);
-	}
+	float Speed = 7f;
 
 	void Update()
 	{
