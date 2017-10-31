@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4053609962313788}
-  - component: {fileID: 114258700401685524}
   - component: {fileID: 114865477177733646}
   m_Layer: 0
   m_Name: Respon_Item
@@ -41,18 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 5, y: 0, z: 0}
---- !u!114 &114258700401685524
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1184623942437198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9ca4fdb6c76314eb2f7e00e6901a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextObj: {fileID: 0}
 --- !u!114 &114865477177733646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1021599052398444, guid: ed353b894aa99dc4d83cc206128b3a0d, type: 2}
   ResponTr: {fileID: 4053609962313788}
-  Respawn_Cycle: 3
+  Respawn_Cycle: 9

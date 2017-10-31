@@ -15,6 +15,9 @@ public class FireControl : MonoBehaviour {
     public float ShortFireDelay;
     private bool ShortFireState;
 
+	private bool final_FireState;
+	public float final_FireDelay;  
+
     public AudioClip sfx;
     public AudioSource audioSource;
 
@@ -27,6 +30,7 @@ public class FireControl : MonoBehaviour {
     {
         FireState = true;
         ShortFireState = true;
+		final_FireState = true;
     }
     void Update ()
     {   
@@ -34,9 +38,8 @@ public class FireControl : MonoBehaviour {
             Fire();
         if(ShortFireState == true)
             ShortFire();
-        FinalFire();
-           
-        
+		if(final_FireState == true)
+        	FinalFire(); 
     }
 
     void Fire()
@@ -55,24 +58,7 @@ public class FireControl : MonoBehaviour {
             
         }
     }
-    IEnumerator FireCycleControl()
-    {
-        // 처음에 FireState를 false로 만들고
-        FireState = false;
-        // FireDelay초 후에
-        yield return new WaitForSeconds(FireDelay);
-        // FireState를 true로 만든다.
-        FireState = true;
-    }
-    IEnumerator ShortFireCycleControl()
-    {
-        // 처음에 FireState를 false로 만들고
-        ShortFireState = false;
-        // FireDelay초 후에
-        yield return new WaitForSeconds(ShortFireDelay);
-        // FireState를 true로 만든다.
-        ShortFireState = true;
-    }
+
     void ShortFire()
     {
         if (ShortFireState)
@@ -93,9 +79,53 @@ public class FireControl : MonoBehaviour {
     }
     void FinalFire()
     {
-        if (Input.GetKeyDown("d"))        
-            Instantiate(Final_Effect, tr.position*0, Quaternion.identity); // 궁극기 이펙트
+		if (final_FireState) {
+			if (Input.GetKeyDown("d")) {
+				StartCoroutine(final_FireCycleControl());
+				if (Player_Control.FinalStack > 0) {
+					Instantiate (Final_Effect, tr.position * 0, Quaternion.identity);
+					Player_Control.FinalStack = Player_Control.FinalStack - 1;			
+					Debug.Log (Player_Control.FinalStack);
 
-    }
+					var objects = GameObject.FindGameObjectsWithTag ("EnemyMissile");
+					foreach (var enemy in objects) {
+						Destroy (enemy);
+					}
+					objects = GameObject.FindGameObjectsWithTag ("Enemy");
+					foreach (var enemy in objects) {
+						Destroy (enemy);
+					}
+				}
+			}
+		}
+   	}
+
+	IEnumerator FireCycleControl()
+	{
+		// 처음에 FireState를 false로 만들고
+		FireState = false;
+		// FireDelay초 후에
+		yield return new WaitForSeconds(FireDelay);
+		// FireState를 true로 만든다.
+		FireState = true;
+	}
+	IEnumerator ShortFireCycleControl()
+	{
+		// 처음에 FireState를 false로 만들고
+		ShortFireState = false;
+		// FireDelay초 후에
+		yield return new WaitForSeconds(ShortFireDelay);
+		// FireState를 true로 만든다.
+		ShortFireState = true;
+	}
+	IEnumerator final_FireCycleControl()
+	{
+		// 처음에 FireState를 false로 만들고
+		final_FireState = false;
+		// FireDelay초 후에
+		yield return new WaitForSeconds(final_FireDelay);
+		// FireState를 true로 만든다.
+		final_FireState = true;
+	}
 }
     

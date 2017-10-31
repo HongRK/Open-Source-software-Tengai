@@ -7,10 +7,10 @@ public class Enemy_BulletControl : MonoBehaviour
     public Transform tr;
     public float destroyXpos;
 
-    void OnTriggerEnter2D(Collider2D coll)
+	void OnTriggerEnter2D(Collider2D coll)
     {
-        if (coll.CompareTag("Player"))
-            Destroy(this.gameObject);
+		if (coll.CompareTag("Player"))
+			Destroy(this.gameObject);
     }
     private void Update()
     {

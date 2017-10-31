@@ -11,6 +11,7 @@ public class Player_Control : MonoBehaviour
     public int initHp = 10;
     public GameObject effect;
 	public static int BulletStack = 1;
+	public static int FinalStack = 3;
 
 	Vector3 Respawn = new Vector3(-25,0,0);
 
@@ -80,6 +81,11 @@ public class Player_Control : MonoBehaviour
 			BulletStack++;
 			if (BulletStack >= 3)
 				BulletStack = 3;
+		if (coll.CompareTag ("FinalItem")) {
+			FinalStack +=1;
+			if (FinalStack > 3)
+				FinalStack = 3;
+		}
 	
         if (hp <= 0)
         {
@@ -89,6 +95,7 @@ public class Player_Control : MonoBehaviour
 			transform.position = Respawn;
 			hp = 10;
 			BulletStack = 1;
+			FinalStack = 3;
         }
     }
 		

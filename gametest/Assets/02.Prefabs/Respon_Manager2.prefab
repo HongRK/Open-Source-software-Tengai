@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4353355537987078}
-  - component: {fileID: 114476923390765894}
   - component: {fileID: 114649850082686176}
   m_Layer: 0
   m_Name: Respon_Manager2
@@ -41,18 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 5, y: 0, z: 0}
---- !u!114 &114476923390765894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1971151978783980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9ca4fdb6c76314eb2f7e00e6901a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextObj: {fileID: 0}
 --- !u!114 &114649850082686176
 MonoBehaviour:
   m_ObjectHideFlags: 1

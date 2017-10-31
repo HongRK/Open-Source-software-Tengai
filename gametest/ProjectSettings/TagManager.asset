@@ -11,6 +11,7 @@ TagManager:
   - Fire
   - PlayerShortMissile
   - Item
+  - FinalItem
   layers:
   - Default
   - TransparentFX
