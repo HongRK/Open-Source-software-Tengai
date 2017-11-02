@@ -5,8 +5,7 @@ using UnityEngine;
 public class Bullet_AI : MonoBehaviour {
     GameObject player;
     public GameObject bullet;
-    float speed = 6.0f;
-    float vx4 = 0, vy4 = 0;
+    float speed = 10.0f;
     void Start () {
         player = GameObject.Find("Player");
     }
@@ -23,9 +22,10 @@ public class Bullet_AI : MonoBehaviour {
 
 
         float vx, vy, vx0, vy0, vx1, vy1, vx2, vy2, vx3, vy3;
-        float theta = 3.0f ;
-        vx = -1.0f; vy = 1.0f;
+        vx = -1.0f; vy = 0.0f;
         vx0 = vx; vy0 = vy;
+        float theta = 5.0f ;
+        
 
         if (d != 0.0)
         {
@@ -34,13 +34,13 @@ public class Bullet_AI : MonoBehaviour {
         }
         else
          {
-            vx1 = 0;
+            vx1 = 0.0f;
             vy1 = speed;
         }
 
         float rad = Mathf.PI / 180 * theta;
         vx2 = Mathf.Cos(rad) * vx0 - Mathf.Sin(rad) * vy0;
-        vy2 = Mathf.Sin(rad) * vx0 - Mathf.Cos(rad) * vy0;
+        vy2 = Mathf.Sin(rad) * vx0 + Mathf.Cos(rad) * vy0;
 
         if (vx0 * vx1 + vy0 * vy1 >= vx0 * vx2 + vy0 * vy2)
         {
@@ -50,7 +50,7 @@ public class Bullet_AI : MonoBehaviour {
         else
         {
             vx3 = Mathf.Cos(rad) * vx0 + Mathf.Sin(rad) * vy0;
-            vy3 = Mathf.Sin(rad) * vx0 + Mathf.Cos(rad) * vy0;
+            vy3 = -1 * Mathf.Sin(rad) * vx0 + Mathf.Cos(rad) * vy0;
         
             float px = mx - x, py = my - y;
         
@@ -65,8 +65,6 @@ public class Bullet_AI : MonoBehaviour {
                 vy = vy3;
             }
         }
-        vx4 = vx;
-        vy4 = vy;
         vx += x;
         vy += y;
         bullet.transform.position = Vector3.MoveTowards(bullet.transform.position, new Vector3(vx, vy, 0), speed * Time.deltaTime);
