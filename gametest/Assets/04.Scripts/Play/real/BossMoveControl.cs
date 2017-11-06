@@ -13,19 +13,26 @@ public class BossMoveControl : MonoBehaviour {
     Vector3 target;
     Vector3 start;
 
+
+
     void Start()
     {
         start = tr.position;
-        target = new Vector3(8, 0, 0);
+        target = new Vector3(8, 2, 0);
         starttime = Time.time;
         distance = Vector3.Distance(start, target);
         Debug.Log("Debug");
-    }
+	}
+
+	
 
     void Update ()
     {
         float discovered = (Time.time - starttime) * speed;
         float franjouney = discovered / distance;
         tr.position = Vector3.Lerp(start, target, franjouney);
+		if (tr.position.x == target.x) {
+			Boss_Pattern.MoveState = true;
+		}
 	}
 }

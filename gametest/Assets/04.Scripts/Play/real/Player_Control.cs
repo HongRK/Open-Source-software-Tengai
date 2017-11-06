@@ -77,6 +77,8 @@ public class Player_Control : MonoBehaviour
             hp--;
         if (coll.CompareTag("Enemy"))
             hp -= 2;
+		if (coll.CompareTag ("Boss"))
+			hp -= 5;
 		if (coll.CompareTag ("Item"))
 			BulletStack++;
 			if (BulletStack >= 3)

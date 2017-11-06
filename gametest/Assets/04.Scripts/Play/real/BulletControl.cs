@@ -10,6 +10,8 @@ public class BulletControl : MonoBehaviour {
     {
         if (coll.CompareTag("Enemy"))
            Destroy(this.gameObject);
+		if (coll.CompareTag("Boss"))
+			Destroy(this.gameObject);
     }
     private void Update()
     {

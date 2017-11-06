@@ -15,6 +15,7 @@ TagManager:
   - ShortAttackAnimation
   - FinalAttackAnimation
   - ExplosionAnimation
+  - Boss
   layers:
   - Default
   - TransparentFX

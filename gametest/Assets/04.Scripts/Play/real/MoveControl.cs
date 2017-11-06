@@ -16,6 +16,5 @@ public class MoveControl : MonoBehaviour {
     void Update ()
     {
         tr.Translate(Vector3.right * speed * Time.deltaTime);
-        
 	}
 }

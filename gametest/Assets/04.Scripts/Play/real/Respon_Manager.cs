@@ -21,8 +21,11 @@ public class Respon_Manager : MonoBehaviour {
         while (true)
         {
 			yield return new WaitForSeconds(Respawn_Cycle);
-            float range = Screen.width / Screen.height * Camera.main.orthographicSize; //
-            Instantiate(obj, ResponTr.position + new Vector3(0, Random.Range(-range, range) , 0), Quaternion.identity);
+            float range = Screen.width / Screen.height * Camera.main.orthographicSize; 
+			float y_range = Random.Range(-range,range);
+			for(int i=0; i<3; i++)
+				Instantiate(obj, ResponTr.position + new Vector3(-i, y_range-i , 0), Quaternion.identity);
+			
         }
     }
 
