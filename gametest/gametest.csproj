@@ -87,6 +87,8 @@
     <Compile Include="Assets\04.Scripts\End\EndManager.cs" />
     <Compile Include="Assets\04.Scripts\Main\MainManager.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Astral_Finish.cs" />
+    <Compile Include="Assets\04.Scripts\Play\practice\Boss_Control.cs" />
+    <Compile Include="Assets\04.Scripts\Play\practice\Boss_Pattern.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Boss_Shot_Control.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Enemy.cs" />
     <Compile Include="Assets\04.Scripts\Play\practice\Enemy_Data.cs" />
@@ -99,18 +101,16 @@
     <Compile Include="Assets\04.Scripts\Play\practice\Shyvana_bullet_control.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\BossMoveControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Bullet_AI.cs" />
-    <Compile Include="Assets\04.Scripts\Play\real\BulletControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Enemy_BulletControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Enemy_Control.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Enemy_Firecontrol.cs" />
-    <Compile Include="Assets\04.Scripts\Play\real\FinalAttack_Control.cs" />
-    <Compile Include="Assets\04.Scripts\Play\real\FireControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Manager.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\MoveControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\MoveControl_Vertical.cs" />
-    <Compile Include="Assets\04.Scripts\Play\real\orbitalflight2.cs" />
-    <Compile Include="Assets\04.Scripts\Play\real\PauseGame.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\Player_AnimationControl.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\Player_BulletControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Player_Control.cs" />
+    <Compile Include="Assets\04.Scripts\Play\real\Player_FireControl.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Respon_Manager.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Respon_Manager_Test.cs" />
     <Compile Include="Assets\04.Scripts\Play\real\Respon_Manager_Vertical.cs" />
@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\PressStart2P-Regular\OFL.txt" />
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />

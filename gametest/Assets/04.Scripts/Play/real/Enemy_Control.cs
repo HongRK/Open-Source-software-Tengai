@@ -16,7 +16,7 @@ public class Enemy_Control : MonoBehaviour {
 
 
         if (coll.CompareTag("PlayerShortMissile"))
-            hp -= 1;
+            hp -= 5;
         
         if (hp <= 0)
         {

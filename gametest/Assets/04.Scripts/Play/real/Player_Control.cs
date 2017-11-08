@@ -21,6 +21,11 @@ public class Player_Control : MonoBehaviour
     }
     void Update()
     {
+        Move();   
+    }
+    // 움직이는 기능을 하는 메소드
+    private void Move()
+    {
         /////////////////////////Y값에 대한 /////////////////////
         float size = Camera.main.orthographicSize;
         float offset = 0.9f;
@@ -45,12 +50,7 @@ public class Player_Control : MonoBehaviour
             tr.position = new Vector3(-(Wsize - offset), tr.position.y, 0);
         }
         // 매 프레임마다 메소드 호출
-        Move();
-        
-    }
-    // 움직이는 기능을 하는 메소드
-    private void Move()
-    {
+
         if (Input.GetKey(KeyCode.UpArrow))  // ↑ 방향키를 누를 때
         {
             // Translate는 현재 위치에서 ()안에 들어간 값만큼 값을 변화시킨다.

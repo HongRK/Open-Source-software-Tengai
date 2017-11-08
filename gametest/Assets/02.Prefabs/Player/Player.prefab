@@ -64,10 +64,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4825704396942940}
-  - component: {fileID: 114976224914979990}
   - component: {fileID: 212365036703823844}
+  - component: {fileID: 114004805335066088}
   - component: {fileID: 114271545727101664}
-  - component: {fileID: 114321696245865136}
   - component: {fileID: 50493545473124918}
   - component: {fileID: 61226014571429562}
   - component: {fileID: 82478325869981808}
@@ -126,7 +125,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1790296447435156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4825704396942940}
@@ -287,6 +286,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114004805335066088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1888064186878044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4348a7322054943b6bbe90332f42b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 4825704396942940}
+  Normal_Pos:
+  - {fileID: 1437593038051668}
+  - {fileID: 1983954222962084}
+  - {fileID: 1223299981933674}
+  Normal_bullet: {fileID: 1779068225237516, guid: 7641ac68d307ac441b747b29f55c70b4,
+    type: 2}
+  Normal_FireDelay: 0.3
+  Short_Pos:
+  - {fileID: 1790296447435156}
+  Short_bullet: {fileID: 1797645103610492, guid: 064a51eb845c0c9469142a1974293996,
+    type: 2}
+  Short_FireDelay: 1
+  Final_FireDelay: 1
+  Short_Effect: {fileID: 1470536670611142, guid: 62017966f6052a248aca3f00ffeedc68,
+    type: 2}
+  Final_Effect: {fileID: 1470536670611142, guid: 494009e59a45e4e45a5ba087fb0e3f52,
+    type: 2}
 --- !u!114 &114271545727101664
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,47 +331,6 @@ MonoBehaviour:
   hp: 5
   initHp: 10
   effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
---- !u!114 &114321696245865136
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888064186878044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e78f312eebfaaa4cae1389978d2ffef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pos:
-  - {fileID: 1437593038051668}
-  - {fileID: 1223299981933674}
-  - {fileID: 1983954222962084}
-  bullet: {fileID: 1779068225237516, guid: 7641ac68d307ac441b747b29f55c70b4, type: 2}
-  FireDelay: 0.1
-  Shortpos:
-  - {fileID: 1790296447435156}
-  Shortbullet: {fileID: 1797645103610492, guid: 064a51eb845c0c9469142a1974293996,
-    type: 2}
-  ShortFireDelay: 0.3
-  final_FireDelay: 1
-  sfx: {fileID: 8300000, guid: 7b255bfc27256f74a89b4fb5ea0a6e27, type: 3}
-  audioSource: {fileID: 82478325869981808}
-  tr: {fileID: 4825704396942940}
-  effect: {fileID: 1470536670611142, guid: 62017966f6052a248aca3f00ffeedc68, type: 2}
-  Final_Effect: {fileID: 1470536670611142, guid: 494009e59a45e4e45a5ba087fb0e3f52,
-    type: 2}
---- !u!114 &114976224914979990
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1888064186878044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9ca4fdb6c76314eb2f7e00e6901a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TextObj: {fileID: 0}
 --- !u!212 &212365036703823844
 SpriteRenderer:
   m_ObjectHideFlags: 1

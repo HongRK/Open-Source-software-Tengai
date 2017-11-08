@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossMoveControl : MonoBehaviour {
 
 
-    public Transform tr;
+    public Transform Boss;
     public float speed = 10f;
     // Update is called once per frame
     float starttime;
@@ -17,22 +17,26 @@ public class BossMoveControl : MonoBehaviour {
 
     void Start()
     {
-        start = tr.position;
+        start = Boss.position;
         target = new Vector3(8, 2, 0);
         starttime = Time.time;
         distance = Vector3.Distance(start, target);
-        Debug.Log("Debug");
 	}
 
 	
 
     void Update ()
     {
+        BossMove();
+	}
+    void BossMove()
+    {
         float discovered = (Time.time - starttime) * speed;
         float franjouney = discovered / distance;
-        tr.position = Vector3.Lerp(start, target, franjouney);
-		if (tr.position.x == target.x) {
-			Boss_Pattern.MoveState = true;
-		}
-	}
+        Boss.position = Vector3.Lerp(start, target, franjouney);
+        if (Boss.position.x == target.x)
+        {
+            Boss_Pattern.MoveState = true;
+        }
+    }
 }
