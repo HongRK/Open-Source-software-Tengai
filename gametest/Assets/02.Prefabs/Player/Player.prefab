@@ -204,7 +204,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6, y: 1.7}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!82 &82478325869981808
 AudioSource:
@@ -304,12 +304,12 @@ MonoBehaviour:
   - {fileID: 1223299981933674}
   Normal_bullet: {fileID: 1779068225237516, guid: 7641ac68d307ac441b747b29f55c70b4,
     type: 2}
-  Normal_FireDelay: 0.3
+  Normal_FireDelay: 0.1
   Short_Pos:
   - {fileID: 1790296447435156}
   Short_bullet: {fileID: 1797645103610492, guid: 064a51eb845c0c9469142a1974293996,
     type: 2}
-  Short_FireDelay: 1
+  Short_FireDelay: 0.5
   Final_FireDelay: 1
   Short_Effect: {fileID: 1470536670611142, guid: 62017966f6052a248aca3f00ffeedc68,
     type: 2}

@@ -27,7 +27,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         TimeSpan = 0.0f;
-        CheckTime = 5.0f;
+        CheckTime = 10.0f;
         state = true;
     }
 
@@ -39,6 +39,7 @@ public class Manager : MonoBehaviour
         ScoreText.text = "SCORE : " + score.ToString("000000");
 
         TimeSpan += Time.deltaTime;
+        
         if (TimeSpan > CheckTime && state)
         {
             Instantiate(Boss, BossTr.position, Quaternion.identity);

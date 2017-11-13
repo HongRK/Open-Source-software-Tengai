@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Boss_Control : MonoBehaviour
 {
-	public int hp = 30;
+	public int hp = 500;
 	public Transform tr;
 	public GameObject effect;
 

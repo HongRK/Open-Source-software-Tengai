@@ -62,7 +62,7 @@ public class Player_FireControl : MonoBehaviour {
             if (Input.GetKey("s"))
             {
                 StartCoroutine(Short_FireCycleControl());
-				//Instantiate(Short_Effect, Player.position, Quaternion.identity); // 쇼트불렛 이펙트
+				Instantiate(Short_Effect, Player.position, Quaternion.identity); // 쇼트불렛 이펙트
                 for (int i = 0; i < Short_Pos.Length; i++)
                 {
                     Instantiate(Short_bullet, Short_Pos[i].transform.position, Short_Pos[i].transform.rotation); //쇼트불렛만들기

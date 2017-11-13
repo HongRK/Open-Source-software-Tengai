@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 61279469269033812}
   - component: {fileID: 61015662675559310}
   - component: {fileID: 61262410489405664}
-  - component: {fileID: 114976317765737942}
   m_Layer: 0
   m_Name: stage1_monster3 (9)
   m_TagString: Boss
@@ -225,7 +224,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1882971300867324}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45, y: 0.059978254, z: 0}
+  m_LocalPosition: {x: 43, y: 0.945172, z: 0}
   m_LocalScale: {x: 3.1084175, y: 2.6889806, z: 1}
   m_Children:
   - {fileID: 4152517656164390}
@@ -365,6 +364,12 @@ MonoBehaviour:
   - {fileID: 1198981105569232}
   - {fileID: 1492852752396602}
   FireDelay: 0.3
+  time: 0
+  tr: {fileID: 4648603639432372}
+  SpellLev: []
+  Spell: {fileID: 0}
+  Fire_Time: 0
+  WaitingTime: 4
 --- !u!114 &114912508754099104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -376,20 +381,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac30ddf375c4749408fc5ccae1012e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 30
+  hp: 500
   tr: {fileID: 4648603639432372}
   effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
---- !u!114 &114976317765737942
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1882971300867324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cb45d44c16f45a4bbd5099fe096c20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114991196263214688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,7 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0ea28dea8b844288fa80936806ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: {fileID: 4648603639432372}
+  Boss: {fileID: 4648603639432372}
   speed: 10
 --- !u!212 &212851373384718098
 SpriteRenderer:
@@ -435,7 +429,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 79d188eb2189b6b4384c3a428e5fd2b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4301af148dd6a443ad6fe3e8ed731e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

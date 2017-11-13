@@ -23,8 +23,8 @@ public class Respon_Manager : MonoBehaviour {
 			yield return new WaitForSeconds(Respawn_Cycle);
             float range = Screen.width / Screen.height * Camera.main.orthographicSize; 
 			float y_range = Random.Range(-range,range);
-			for(int i=0; i<3; i++)
-				Instantiate(obj, ResponTr.position + new Vector3(-i, y_range-i , 0), Quaternion.identity);
+			
+				Instantiate(obj, ResponTr.position + new Vector3(range, y_range , 0), Quaternion.identity);
 			
         }
     }

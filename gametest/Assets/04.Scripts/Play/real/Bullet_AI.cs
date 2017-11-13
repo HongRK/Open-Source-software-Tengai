@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet_AI : MonoBehaviour {
     GameObject player;
     public GameObject bullet;
-    float speed = 10.0f;
+    float speed = 9.0f;
     void Start () {
         player = GameObject.Find("Player");
     }

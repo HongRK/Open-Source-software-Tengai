@@ -53,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 1325281211091480, guid: f6dedb4e33db3df40b76f359bd5dc968, type: 2}
   ResponTr: {fileID: 4569481054851906}
-  Respawn_Cycle: 3
+  Respawn_Cycle: 2

@@ -17,19 +17,20 @@ public class Boss_Pattern : MonoBehaviour
 	public GameObject[] SpellLev;
 	public GameObject Spell;
 
+    public float Fire_Time;
+    public float WaitingTime;
 
 
 	void Start()
 	{
+        Fire_Time = 0;
+        WaitingTime = 4.0f;
 		FireState = true;
 	}
 	void Update()
 	{
-		{
-			if (FireState == true ) {
-				Fire ();
-			}
-		}
+        Fire();
+		
 	}
 
 	void Fire()
@@ -39,11 +40,15 @@ public class Boss_Pattern : MonoBehaviour
 			if (true)
 			{
 				StartCoroutine(FireCycleControl());
-
-				for (int i = 0; i < bullet_1; i++)
-				{
-					Instantiate(Boss_bullet, pos[i].transform.position, pos[i].transform.rotation);
-				}
+                Fire_Time += Time.deltaTime;
+                if (Fire_Time < WaitingTime)
+                {
+                    for (int i = 0; i < bullet_1; i++)
+                    {
+                        Instantiate(Boss_bullet, pos[i].transform.position, pos[i].transform.rotation);
+                    }
+                }
+                Fire_Time = 0;
 			}
 
 		}
@@ -53,11 +58,23 @@ public class Boss_Pattern : MonoBehaviour
 	void Charge()
 	{
 		if (MoveState) {
-			iTween.MoveBy (gameObject, iTween.Hash ("x", -10.0f, "time", 3.0f, "delay", 0.5f, "x", 10.0f));
-		}
+            iTween.MoveTo(gameObject, iTween.Hash("x", 1f, "speed", 0.01f, "easeType", iTween.EaseType.linear, "looptype", iTween.LoopType.pingPong));
+        }
 	}
 
+    void Pattern_Cycle()
+    {
+        int Pattern_Var = Random.Range(0, 1);
 
+        if (Pattern_Var == 0)
+            Charge();
+        else if (Pattern_Var == 1)
+        {
+           
+                Fire();
+            
+        }
+    }
 
 
 	IEnumerator FireCycleControl()
