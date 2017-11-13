@@ -27,7 +27,7 @@ public class Manager : MonoBehaviour
     void Start()
     {
         TimeSpan = 0.0f;
-        CheckTime = 10.0f;
+        CheckTime = 1.0f;
         state = true;
     }
 
