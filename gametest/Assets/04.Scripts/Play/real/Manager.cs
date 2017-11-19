@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Manager : MonoBehaviour
 {
 
@@ -35,6 +37,7 @@ public class Manager : MonoBehaviour
     void Update()
     {
         Puase();
+        GameOver();
         LifeText.text = "LIFE : " + life.ToString("00");
         ScoreText.text = "SCORE : " + score.ToString("000000");
 
@@ -70,5 +73,10 @@ public class Manager : MonoBehaviour
             else
                 Pause_state = true;
         }
+    }
+    void GameOver()
+    {
+        if(life == 0)
+            SceneManager.LoadScene("End");
     }
 }

@@ -364,6 +364,8 @@ MonoBehaviour:
   - {fileID: 1198981105569232}
   - {fileID: 1492852752396602}
   FireDelay: 0.3
+  PatternDelay: 5
+  Boss_Laser: {fileID: 1721288741843060, guid: 6e6191a8f33ff4e49a96d604c49676d6, type: 2}
 --- !u!212 &212851373384718098
 SpriteRenderer:
   m_ObjectHideFlags: 1

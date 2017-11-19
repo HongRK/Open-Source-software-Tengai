@@ -16,6 +16,7 @@ TagManager:
   - FinalAttackAnimation
   - ExplosionAnimation
   - Boss
+  - EnemyLaser
   layers:
   - Default
   - TransparentFX
