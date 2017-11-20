@@ -19,6 +19,8 @@ public class Manager : MonoBehaviour
     public Text ScoreText;
     public Text PauseText;
     private bool Pause_state = false;
+    public Slider hp_Bar;
+
 
     void Awake()
     {
@@ -48,6 +50,7 @@ public class Manager : MonoBehaviour
             Instantiate(Boss, BossTr.position, Quaternion.identity);
             state = false;
         }
+        hp_Bar.value = Boss_Control.hp;
     }
 
     void Puase()
@@ -76,7 +79,7 @@ public class Manager : MonoBehaviour
     }
     void GameOver()
     {
-        if(life == 0)
+        if (life == 0)
             SceneManager.LoadScene("End");
     }
 }

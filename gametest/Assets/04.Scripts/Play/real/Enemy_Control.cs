@@ -7,7 +7,8 @@ public class Enemy_Control : MonoBehaviour {
     public int hp = 5;
 	public Transform tr;
     public GameObject effect;
-    public float destroyXpos;
+    float destroyXpos = -14;
+    float destroyYpos = -7f;
 
     private void OnTriggerEnter2D(Collider2D coll)
     {
@@ -29,7 +30,7 @@ public class Enemy_Control : MonoBehaviour {
 
         private void Update()
     {
-        if (tr.position.x < destroyXpos)
+        if (tr.position.x < destroyXpos || tr.position.y < destroyYpos)
         {
             Destroy(this.gameObject);
         }

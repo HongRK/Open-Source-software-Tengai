@@ -24,6 +24,7 @@ public class Boss_Pattern : MonoBehaviour
     int PatternInt = -1;
 
     public GameObject Boss_Laser;
+    public GameObject Boss_Laser_Effect;
     float timespan;
     float checktime = 3f;
 	void Start()
@@ -90,6 +91,7 @@ public class Boss_Pattern : MonoBehaviour
                 if (GameObject.FindGameObjectWithTag("EnemyLaser") == null)
                 {
                     Instantiate(Boss_Laser, Boss_Laser.transform.position, Boss_Laser.transform.rotation);
+                    Instantiate(Boss_Laser_Effect, Boss_Laser_Effect.transform.position, Boss_Laser.transform.rotation);
                     timespan = 0;
                 }
             }

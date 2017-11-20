@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy_BulletControl : MonoBehaviour
 {
     public Transform tr;
-    public float destroyXpos;
+    float destroyXpos = -14f;
+    float destroyYpos = -7f;
     void OnTriggerEnter2D(Collider2D coll)
     {
 		if (coll.CompareTag("Player"))
@@ -13,9 +14,10 @@ public class Enemy_BulletControl : MonoBehaviour
     }
     private void Update()
     {
-        if (tr.position.x < destroyXpos)
+        if (tr.position.x < destroyXpos || tr.position.y >-destroyYpos || tr.position.y<destroyYpos)
         {
             Destroy(this.gameObject);
         }
     }
+
 }

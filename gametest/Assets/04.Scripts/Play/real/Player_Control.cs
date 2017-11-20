@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player_Control : MonoBehaviour
 {
@@ -14,7 +15,6 @@ public class Player_Control : MonoBehaviour
 	public static int FinalStack = 3;
 
 	Vector3 Respawn = new Vector3(-25,0,0);
-
     private void Awake()
     {
         hp = initHp;
@@ -93,11 +93,11 @@ public class Player_Control : MonoBehaviour
         {
             Manager.life--;
             Instantiate(effect, tr.position, Quaternion.identity);
-            Debug.Log("Player Die");
 			transform.position = Respawn;
 			hp = 10;
 			BulletStack = 1;
 			FinalStack = 3;
+ 
         }
     }
 		
