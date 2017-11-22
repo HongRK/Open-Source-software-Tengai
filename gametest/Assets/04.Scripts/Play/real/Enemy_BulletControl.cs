@@ -5,8 +5,13 @@ using UnityEngine;
 public class Enemy_BulletControl : MonoBehaviour
 {
     public Transform tr;
-    float destroyXpos = -14f;
-    float destroyYpos = -7f;
+    private float destroyXpos = -14f;
+    private float destroyYpos = -7f;
+    private void Awake()
+    {
+        destroyXpos = -14f;
+        destroyYpos = -7f;
+    }
     void OnTriggerEnter2D(Collider2D coll)
     {
 		if (coll.CompareTag("Player"))

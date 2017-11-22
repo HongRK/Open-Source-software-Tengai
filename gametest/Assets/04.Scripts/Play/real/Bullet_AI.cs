@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet_AI : MonoBehaviour {
-    GameObject player;
+    private GameObject player;
     public GameObject bullet;
-    float speed = 9.0f;
-    void Start () {
+    float speed;
+
+    void Awake () {
         player = GameObject.Find("Player");
+        speed = 9.0f;
     }
 	
-	// Update is called once per frame
 	void Update () {
         float mx = player.transform.position.x;
         float my = player.transform.position.y;

@@ -5,23 +5,49 @@ using UnityEngine.UI;
 
 public class Player_Control : MonoBehaviour
 {
-    public float Speed = 3f;
-    public Transform tr;  //플레이어의 위치값
-
-    public int hp = 10;
-    public int initHp = 10;
+    private Transform Player;  //플레이어의 위치값
     public GameObject effect;
-	public static int BulletStack = 1;
-	public static int FinalStack = 3;
+    private float Speed;
+    private int hp;
+    private int initHp;
+    private int life;
+    public static int Rank_Life;
+	private int BulletStack;
+	private int FinalStack;
+	private Vector3 Respawn;
 
-	Vector3 Respawn = new Vector3(-25,0,0);
+    public int GetBulletStack()
+    {
+        return BulletStack;
+    }
+    public int GetFinalStack()
+    {
+        return FinalStack;
+    }
+    public void SetFinalStack()
+    {
+        FinalStack -=1;
+    }
+    public int GetLife()
+    {
+        return life;
+    }
+
     private void Awake()
     {
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
+        Speed = 7f;
+        initHp = 10;
         hp = initHp;
+        life = 3;
+        BulletStack = 1;
+        FinalStack = 3;
+        Respawn = new Vector3(-25, 0, 0);
     }
     void Update()
     {
-        Move();   
+        Move();
+        Rank_Life = life;
     }
     // 움직이는 기능을 하는 메소드
     private void Move()
@@ -29,25 +55,25 @@ public class Player_Control : MonoBehaviour
         /////////////////////////Y값에 대한 /////////////////////
         float size = Camera.main.orthographicSize;
         float offset = 0.9f;
-        if (tr.position.y >= size - offset)
+        if (Player.position.y >= size - offset)
         {
-            tr.position = new Vector3(tr.position.x, size - offset, 0);
+            Player.position = new Vector3(Player.position.x, size - offset, 0);
         }
-        if (tr.position.y <= -(size - offset))
+        if (Player.position.y <= -(size - offset))
         {
-            tr.position = new Vector3(tr.position.x, -(size - offset), 0);
+            Player.position = new Vector3(Player.position.x, -(size - offset), 0);
         }
         /////////////////////////////////////////////////////
         float ScreenRation = (float)Screen.width / (float)Screen.height;
         float Wsize = Camera.main.orthographicSize * ScreenRation; // 가로 사이즈
 
-        if (tr.position.x >= Wsize - offset)
+        if (Player.position.x >= Wsize - offset)
         {
-            tr.position = new Vector3(Wsize - offset, tr.position.y, 0);
+            Player.position = new Vector3(Wsize - offset, Player.position.y, 0);
         }
-        if (tr.position.x <= -(Wsize - offset))
+        if (Player.position.x <= -(Wsize - offset))
         {
-            tr.position = new Vector3(-(Wsize - offset), tr.position.y, 0);
+            Player.position = new Vector3(-(Wsize - offset), Player.position.y, 0);
         }
         // 매 프레임마다 메소드 호출
 
@@ -91,10 +117,10 @@ public class Player_Control : MonoBehaviour
 	
         if (hp <= 0)
         {
-            Manager.life--;
-            Instantiate(effect, tr.position, Quaternion.identity);
-			transform.position = Respawn;
-			hp = 10;
+            life--;
+            Instantiate(effect, Player.position, Quaternion.identity);
+			Player.position = Respawn;
+			hp = initHp;
 			BulletStack = 1;
 			FinalStack = 3;
  

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player_AnimationControl : MonoBehaviour {
 
-    void Start()
+    void Awake()
     {
         destroy();
     }

@@ -3,9 +3,13 @@ using System.Collections;
 
 public class yasuo_effect_control : MonoBehaviour
 {
-	float Speed = 7f;
+    private float Speed = 7f;
 
-	void Update()
+    private void Awake()
+    {
+        Speed = 7f;
+    }
+    void Update()
 	{
 		Move ();
 	}

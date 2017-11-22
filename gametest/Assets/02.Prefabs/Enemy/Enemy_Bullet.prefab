@@ -104,8 +104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tr: {fileID: 4153875451023386}
-  destroyXpos: -12
-  destroyYpos: -6.5
 --- !u!212 &212005370977376476
 SpriteRenderer:
   m_ObjectHideFlags: 1

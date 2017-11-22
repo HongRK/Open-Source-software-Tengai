@@ -5,8 +5,12 @@ using UnityEngine;
 public class Player_BulletControl : MonoBehaviour {
 
     public Transform tr;
-    public float destroyXpos;
-    void OnTriggerEnter2D(Collider2D coll)
+    private float destroyXpos;
+    private void Awake()
+    {
+        destroyXpos = 22;
+    }
+    private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.CompareTag("Enemy"))
            Destroy(this.gameObject);

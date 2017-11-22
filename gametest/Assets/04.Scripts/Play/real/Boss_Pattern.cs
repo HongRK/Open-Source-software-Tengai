@@ -4,39 +4,52 @@ using System.Collections;
 public class Boss_Pattern : MonoBehaviour
 {
     public Transform Boss;
-    public float speed = 10f;
-    float starttime;
-    float distance;
+    private float speed;
+    private float starttime;
+    private float distance;
 
-    Vector3 target = new Vector3(8,2,0);
+    Vector3 target;
     Vector3 start;
 
     public GameObject Boss_bullet;
 	public GameObject[] pos;
-	public float FireDelay;             // 미사일 발사 속도(미사일이 날라가는 속도x)
-    private bool FireState = true;
-	int Num_BossBullet = 7;
+	private float FireDelay;             // 미사일 발사 속도(미사일이 날라가는 속도x)
+    private bool FireState;
+	private int Num_BossBullet;
     // Use this for initializati
-    bool Arrive_State = false; //처음에 도착햇는지 나타냄
-    bool DashState = true;  // 왕복 운동 도착 했는지를 나타냄
-    bool PatternState = true;
-    public float PatternDelay;
-    int PatternInt = -1;
+    private bool Arrive_State; //처음에 도착햇는지 나타냄
+    private bool DashState;  // 왕복 운동 도착 했는지를 나타냄
+    private bool PatternState;
+    private float PatternDelay;
+    private int PatternInt;
 
     public GameObject Boss_Laser;
     public GameObject Boss_Laser_Effect;
-    float timespan;
-    float checktime = 3f;
-	void Start()
+    private float timespan;
+    private float checktime;
+    
+	void Awake()
 	{
-        start = Boss.position;
+        speed = 10f;
         starttime = Time.time;
+        target = new Vector3(8, 2, 0);
         distance = Vector3.Distance(start, target);
+        start = Boss.position;
+
+        FireState = true;
+        Arrive_State = false;
+        DashState = true;
+        PatternState = true;
+
+        Num_BossBullet = 7;
+        PatternInt = -1;
+        checktime = 3f;
+        FireDelay = 0.3f;
+        PatternDelay = 5f;
     }
     void Update()
 	{
         First_BossMove();
-
 
         if (Pattern()==0)
             Fire();
@@ -56,14 +69,7 @@ public class Boss_Pattern : MonoBehaviour
         }
         return PatternInt;
     }
-    IEnumerator PatternCycleControl()
-    {
-        PatternState = false;
-        // FireDelay초 후에
-        yield return new WaitForSeconds(PatternDelay);
-        // FireState를 true로 만든다.
-        PatternState = true;
-    }
+    
 
     void First_BossMove()
     {
@@ -151,5 +157,14 @@ public class Boss_Pattern : MonoBehaviour
 		// FireState를 true로 만든다.
 		FireState = true;
 	}
+
+    IEnumerator PatternCycleControl()
+    {
+        PatternState = false;
+        // FireDelay초 후에
+        yield return new WaitForSeconds(PatternDelay);
+        // FireState를 true로 만든다.
+        PatternState = true;
+    }
 }
 

@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class Enemy_Control : MonoBehaviour {
 
-    public int hp = 5;
+    private int hp;
 	public Transform tr;
     public GameObject effect;
-    float destroyXpos = -14;
-    float destroyYpos = -7f;
+    private float destroyXpos;
+    private float destroyYpos;
 
+    private void Awake()
+    {
+        hp = 5;
+        destroyXpos = -14;
+        destroyYpos = -7f;
+    }
     private void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.CompareTag("PlayerMissile"))
@@ -21,14 +27,14 @@ public class Enemy_Control : MonoBehaviour {
         
         if (hp <= 0)
         {
-            Manager.score += 100;
+            GameObject.Find("/GameManager").GetComponent<Manager>().SetScore_Boss();
             Instantiate(effect, tr.position, Quaternion.identity);
             Destroy(this.gameObject);
         }
     }
 
 
-        private void Update()
+    private void Update()
     {
         if (tr.position.x < destroyXpos || tr.position.y < destroyYpos)
         {

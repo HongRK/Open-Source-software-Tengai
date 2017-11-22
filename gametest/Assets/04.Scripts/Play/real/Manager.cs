@@ -7,11 +7,9 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
 
-    public static int score = 0;
-    public static int life = 10;
-    float TimeSpan;
-    float CheckTime;
-    bool state;
+    private float TimeSpan;
+    private float CheckTime;
+    private bool Boss_State;
     
     public GameObject Boss;
     public Transform BossTr;
@@ -22,22 +20,34 @@ public class Manager : MonoBehaviour
     public Slider hp_Bar;
 
 
-    void Awake()
+    private int life;
+    private int score;
+    public static int Rank_Score;
+
+    public void SetScore_Boss()
     {
-        Screen.sleepTimeout = SleepTimeout.NeverSleep; // 핸드폰 화면 안꺼지게
-        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, true); // 화면 해상도 16:9
+        score += 100;
     }
-                 // Use this for initialization
-    void Start()
+    public int GetScore()
+    {
+        return score;
+    }
+    private void Awake()
     {
         TimeSpan = 0.0f;
-        CheckTime = 1.0f;
-        state = true;
+        CheckTime = 3.0f;
+        Boss_State = true;
+        hp_Bar.transform.localScale = new Vector3(0, 1, 1);
+        Screen.sleepTimeout = SleepTimeout.NeverSleep; // 핸드폰 화면 안꺼지게
+        Screen.SetResolution(Screen.width, Screen.width * 16 / 9, true); // 화면 해상도 16:9
+        score = 0;
     }
 
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
+        life = GameObject.Find("/Player").GetComponent<Player_Control>().GetLife();
         Puase();
         GameOver();
         LifeText.text = "LIFE : " + life.ToString("00");
@@ -45,15 +55,17 @@ public class Manager : MonoBehaviour
 
         TimeSpan += Time.deltaTime;
         
-        if (TimeSpan > CheckTime && state)
+        if (TimeSpan > CheckTime && Boss_State)
         {
             Instantiate(Boss, BossTr.position, Quaternion.identity);
-            state = false;
+            Boss_State = false;
+            hp_Bar.transform.localScale = new Vector3(1,1,1);
         }
         hp_Bar.value = Boss_Control.hp;
+        Rank_Score = score;
     }
 
-    void Puase()
+    private void Puase()
     {
         
         if(Pause_state == false)
@@ -77,7 +89,7 @@ public class Manager : MonoBehaviour
                 Pause_state = true;
         }
     }
-    void GameOver()
+    private void GameOver()
     {
         if (life == 0)
             SceneManager.LoadScene("End");

@@ -4,13 +4,16 @@ using System.Collections;
 
 public class Boss_Control : MonoBehaviour
 {
-	public static int hp = 500;
+    public static int hp;
 	public Transform tr;
 	public GameObject effect;
 
-    GameObject Hp;
+ 
 
-
+    private void Awake()
+    {
+        hp = 500;
+    }
     private void OnTriggerEnter2D(Collider2D coll)
 	{
 		if (coll.CompareTag("PlayerMissile"))
@@ -28,16 +31,10 @@ public class Boss_Control : MonoBehaviour
 
 		if (hp <= 0)
 		{
-			Manager.score += 100;
-			Instantiate(effect, tr.position, Quaternion.identity);
+            GameObject.Find("/GameManager").GetComponent<Manager>().SetScore_Boss();
+            Instantiate(effect, tr.position, Quaternion.identity);
 			Destroy(this.gameObject);
 		}
-	}
-
-
-	private void Update()
-	{
-		
 	}
 }
 

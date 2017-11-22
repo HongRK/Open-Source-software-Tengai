@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Firecontrol : MonoBehaviour
-{
-
-
+{ 
     public GameObject[] pos;
     public GameObject bullet;
-    public float FireDelay;             // 미사일 발사 속도(미사일이 날라가는 속도x)
+    private float FireDelay;             // 미사일 발사 속도(미사일이 날라가는 속도x)
     private bool FireState;             // 미사일 발사 속도를 제어할 변수
 
-    void Start()
+    private void Awake()
     {
         FireState = true;
+        FireDelay = 0.9f;
     }
-    void Update()
+    private void Update()
     {
         {
             if (FireState == true)
@@ -23,7 +22,7 @@ public class Enemy_Firecontrol : MonoBehaviour
         }
     }
 
-    void Fire()
+    private void Fire()
     {
         if (FireState)
         {

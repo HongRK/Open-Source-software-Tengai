@@ -4,31 +4,39 @@ using UnityEngine;
 
 public class Player_FireControl : MonoBehaviour {
 
-    public Transform Player;
+    private Transform Player;
 
     public GameObject[] Normal_Pos;
     public GameObject Normal_bullet;
-    public float Normal_FireDelay;             // 미사일 발사 속도(미사일이 날라가는 속도x)
+    private float Normal_FireDelay;             // 미사일 발사 속도(미사일이 날라가는 속도x)
     private bool Normal_FireState;             // 미사일 발사 속도를 제어할 변수
 
     public GameObject[] Short_Pos;
     public GameObject Short_bullet;
-    public float Short_FireDelay;
+    private float Short_FireDelay;
     private bool Short_FireState;
 
 	private bool Final_FireState;
-	public float Final_FireDelay;  
+    private float Final_FireDelay;
 
 
 	public GameObject Short_Effect;
     public GameObject Final_Effect;
-
+    
+    private int BulletStack;
+    private int FinalStack;
 
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
+        Normal_FireDelay = 0.1f;
+        Short_FireDelay = 0.3f;
+        Final_FireDelay = 1f;
         Normal_FireState = true;
         Short_FireState = true;
 		Final_FireState = true;
+        BulletStack = GameObject.Find("/Player").GetComponent<Player_Control>().GetBulletStack();
+        FinalStack = GameObject.Find("/Player").GetComponent<Player_Control>().GetFinalStack();
     }
     void Update ()
     {   
@@ -39,7 +47,7 @@ public class Player_FireControl : MonoBehaviour {
 		if(Final_FireState == true)
         	Final_Fire(); 
     }
-
+     
     void Normal_Fire()
     {
         if (Normal_FireState)
@@ -47,7 +55,7 @@ public class Player_FireControl : MonoBehaviour {
             if (Input.GetKey("a"))
             {
                 StartCoroutine(Normal_FireCycleControl());
-				for (int i = 0; i < Player_Control.BulletStack; i++)
+				for (int i = 0; i < BulletStack; i++)
                 {
                     Instantiate(Normal_bullet, Normal_Pos[i].transform.position, Normal_Pos[i].transform.rotation);
                 }
@@ -76,10 +84,10 @@ public class Player_FireControl : MonoBehaviour {
 		if (Final_FireState) {
 			if (Input.GetKeyDown("d")) {
 				StartCoroutine(Final_FireCycleControl());
-				if (Player_Control.FinalStack > 0) {
+				if (FinalStack > 0) {
 					Instantiate (Final_Effect, Player.position * 0, Quaternion.identity);
-					Player_Control.FinalStack = Player_Control.FinalStack - 1;			
-					Debug.Log (Player_Control.FinalStack);
+                    GameObject.Find("/Player").GetComponent<Player_Control>().SetFinalStack();
+                    Debug.Log (FinalStack);
 
 					var objects = GameObject.FindGameObjectsWithTag ("EnemyMissile");
 					foreach (var enemy in objects) {
@@ -122,4 +130,3 @@ public class Player_FireControl : MonoBehaviour {
 		Final_FireState = true;
 	}
 }
-    

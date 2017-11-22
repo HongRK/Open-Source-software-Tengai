@@ -7,11 +7,6 @@ public class MoveControl : MonoBehaviour {
 
     public Transform tr;
     public float speed = 10f;
-    // Update is called once per frame
-    void Start()
-    {
-            
-    }
     
     void Update ()
     {
