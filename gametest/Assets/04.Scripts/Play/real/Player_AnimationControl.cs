@@ -24,7 +24,7 @@ public class Player_AnimationControl : MonoBehaviour {
         }
         foreach (var exploani in explosion_animation)
         {
-            Destroy(exploani, 0.75f);
+            Destroy(exploani, 0.85f);
         }
         foreach (var shortmissile in short_missile)
         {

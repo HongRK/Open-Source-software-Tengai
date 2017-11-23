@@ -152,7 +152,6 @@ MonoBehaviour:
   pos:
   - {fileID: 1897407721282296}
   bullet: {fileID: 1543856593921066, guid: 7d3eff55fb89bcd42a558a9870c55783, type: 2}
-  FireDelay: 1.2
 --- !u!114 &114376664102813306
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,9 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c4b23133e5bba4880435997c545316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
   tr: {fileID: 4965532636631916}
-  effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
+  effect: {fileID: 1684664754609502, guid: ae76079deb5c5894db7a6b5e5f278837, type: 2}
 --- !u!114 &114965358013346360
 MonoBehaviour:
   m_ObjectHideFlags: 1

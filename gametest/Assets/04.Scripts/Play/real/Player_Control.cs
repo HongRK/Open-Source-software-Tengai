@@ -39,7 +39,7 @@ public class Player_Control : MonoBehaviour
         Speed = 7f;
         initHp = 10;
         hp = initHp;
-        life = 3;
+        life = 5;
         BulletStack = 1;
         FinalStack = 3;
         Respawn = new Vector3(-25, 0, 0);

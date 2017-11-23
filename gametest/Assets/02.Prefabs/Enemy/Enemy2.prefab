@@ -161,10 +161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c4b23133e5bba4880435997c545316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
   tr: {fileID: 4586815985346028}
-  effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
-  destroyXpos: -30
+  effect: {fileID: 1684664754609502, guid: ae76079deb5c5894db7a6b5e5f278837, type: 2}
 --- !u!114 &114881498329055604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,7 +177,6 @@ MonoBehaviour:
   pos:
   - {fileID: 1157935699550084}
   bullet: {fileID: 1893067893675624, guid: 38aa251df9c78b34aaf4e13d8cc10950, type: 2}
-  FireDelay: 0.9
 --- !u!212 &212956693370878514
 SpriteRenderer:
   m_ObjectHideFlags: 1

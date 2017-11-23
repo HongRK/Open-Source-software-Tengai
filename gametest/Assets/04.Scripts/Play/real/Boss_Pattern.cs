@@ -110,11 +110,11 @@ public class Boss_Pattern : MonoBehaviour
 	void Dash()
 	{
          
-            float speed = 15.0f;
+            float speed = 25.0f;
             if (DashState == true)
             {
                 transform.Translate(-Vector3.right* Time.deltaTime * speed);
-                if (transform.position.x < -2.0f)
+                if (transform.position.x < -10.0f)
                 {
                     DashState = false;
                 }

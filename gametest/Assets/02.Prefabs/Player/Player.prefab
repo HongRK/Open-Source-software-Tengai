@@ -297,20 +297,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4348a7322054943b6bbe90332f42b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 4825704396942940}
   Normal_Pos:
   - {fileID: 1437593038051668}
   - {fileID: 1983954222962084}
   - {fileID: 1223299981933674}
   Normal_bullet: {fileID: 1779068225237516, guid: 7641ac68d307ac441b747b29f55c70b4,
     type: 2}
-  Normal_FireDelay: 0.1
   Short_Pos:
   - {fileID: 1790296447435156}
   Short_bullet: {fileID: 1797645103610492, guid: 064a51eb845c0c9469142a1974293996,
     type: 2}
-  Short_FireDelay: 0.5
-  Final_FireDelay: 1
   Short_Effect: {fileID: 1470536670611142, guid: 62017966f6052a248aca3f00ffeedc68,
     type: 2}
   Final_Effect: {fileID: 1470536670611142, guid: 494009e59a45e4e45a5ba087fb0e3f52,
@@ -326,11 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8528ff13584fa74f8b36ecb6541a233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 7
-  tr: {fileID: 4825704396942940}
-  hp: 5
-  initHp: 10
-  effect: {fileID: 1470536670611142, guid: 4516d1c2a40f96b48befae0051eb04d5, type: 2}
+  effect: {fileID: 1684664754609502, guid: ae76079deb5c5894db7a6b5e5f278837, type: 2}
 --- !u!212 &212365036703823844
 SpriteRenderer:
   m_ObjectHideFlags: 1

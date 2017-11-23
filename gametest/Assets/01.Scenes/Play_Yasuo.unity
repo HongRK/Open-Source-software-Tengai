@@ -147,6 +147,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114087214443510982, guid: a045f2f6182bb1a488907b158cde8528,
+        type: 2}
+      propertyPath: Respawn_Scale
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a045f2f6182bb1a488907b158cde8528, type: 2}
   m_IsPrefabParent: 0
@@ -264,7 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -327,8 +332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 22.93, y: -186.1}
+  m_SizeDelta: {x: 482.63, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &216088050
 MonoBehaviour:
@@ -366,9 +371,9 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 998703447}
+  m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 320514969}
-  m_HandleRect: {fileID: 998703446}
+  m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 500
@@ -814,16 +819,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114004805335066088, guid: 03c832c97ac9f28438a41bbd6ca50b1f,
-        type: 2}
-      propertyPath: Short_FireDelay
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114271545727101664, guid: 03c832c97ac9f28438a41bbd6ca50b1f,
-        type: 2}
-      propertyPath: hp_Bar
-      value: 
-      objectReference: {fileID: 216088050}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03c832c97ac9f28438a41bbd6ca50b1f, type: 2}
   m_IsPrefabParent: 0
@@ -839,6 +834,7 @@ GameObject:
   - component: {fileID: 1058918041}
   - component: {fileID: 1058918040}
   - component: {fileID: 1058918039}
+  - component: {fileID: 1058918044}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -917,6 +913,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1058918044
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1058918038}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b3626bb48f339714397157a66bf02452, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &1102716864
 Prefab:
   m_ObjectHideFlags: 0
@@ -955,6 +1031,11 @@ Prefab:
     - target: {fileID: 4440600361614012, guid: b899f347cce9fde45ba03451713ea427, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114411058009107382, guid: b899f347cce9fde45ba03451713ea427,
+        type: 2}
+      propertyPath: Respawn_Scale
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b899f347cce9fde45ba03451713ea427, type: 2}
@@ -1094,7 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1160,6 +1241,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4865093532639282, guid: 8a7e95f179545994c9202aaf20c54496, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 16.02
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a7e95f179545994c9202aaf20c54496, type: 2}
   m_IsPrefabParent: 0
@@ -1202,6 +1287,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114865477177733646, guid: 29eb34b330256e744a92f778312e7f14,
+        type: 2}
+      propertyPath: obj
+      value: 
+      objectReference: {fileID: 1021599052398444, guid: 58ec49a3374f73f45ab812cc17a392ce,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29eb34b330256e744a92f778312e7f14, type: 2}
   m_IsPrefabParent: 0
@@ -1288,7 +1379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

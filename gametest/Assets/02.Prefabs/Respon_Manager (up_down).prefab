@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1356589863978288}
   m_LocalRotation: {x: 0.043619405, y: 0, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 14, y: 5, z: -1}
+  m_LocalPosition: {x: 5, y: 5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,3 +54,5 @@ MonoBehaviour:
   obj: {fileID: 1332121696177118, guid: 0ec1c1ab899992947a4b7ecf3df74787, type: 2}
   ResponTr: {fileID: 4440600361614012}
   Respawn_Cycle: 3
+  Respawn_Scale: 5
+  Respawn_InnerDelay: 0.35
