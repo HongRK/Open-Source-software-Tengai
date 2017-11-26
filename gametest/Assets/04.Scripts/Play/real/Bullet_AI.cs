@@ -25,7 +25,7 @@ public class Bullet_AI : MonoBehaviour {
         float vx, vy, vx0, vy0, vx1, vy1, vx2, vy2, vx3, vy3;
         vx = -1.0f; vy = 0.0f;
         vx0 = vx; vy0 = vy;
-        float theta = 5.0f ;
+        float theta = 1.0f ;
         
 
         if (d != 0.0)

@@ -35,8 +35,6 @@ public class Player_FireControl : MonoBehaviour {
         Normal_FireState = true;
         Short_FireState = true;
 		Final_FireState = true;
-        BulletStack = GameObject.Find("/Player").GetComponent<Player_Control>().GetBulletStack();
-        FinalStack = GameObject.Find("/Player").GetComponent<Player_Control>().GetFinalStack();
     }
     void Update ()
     {   
@@ -45,9 +43,12 @@ public class Player_FireControl : MonoBehaviour {
         if(Short_FireState == true)
             Short_Fire();
 		if(Final_FireState == true)
-        	Final_Fire(); 
+        	Final_Fire();
+        BulletStack = GameObject.Find("/Player").GetComponent<Player_Control>().GetBulletStack();
+        FinalStack = GameObject.Find("/Player").GetComponent<Player_Control>().GetFinalStack();
+
     }
-     
+
     void Normal_Fire()
     {
         if (Normal_FireState)

@@ -105,10 +105,12 @@ public class Player_Control : MonoBehaviour
             hp -= 2;
 		if (coll.CompareTag ("Boss"))
 			hp -= 5;
-		if (coll.CompareTag ("Item"))
-			BulletStack++;
-			if (BulletStack >= 3)
-				BulletStack = 3;
+        if (coll.CompareTag("Item"))
+        {
+            BulletStack++;
+            if (BulletStack >= 3)
+                BulletStack = 3;
+        }
 		if (coll.CompareTag ("FinalItem")) {
 			FinalStack +=1;
 			if (FinalStack > 3)
