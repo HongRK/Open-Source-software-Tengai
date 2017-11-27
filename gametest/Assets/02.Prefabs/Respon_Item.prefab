@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143ea6ae0638c9f41a17c519354987a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 1021599052398444, guid: ed353b894aa99dc4d83cc206128b3a0d, type: 2}
+  obj: {fileID: 1021599052398444, guid: 58ec49a3374f73f45ab812cc17a392ce, type: 2}
   ResponTr: {fileID: 4053609962313788}
   Respawn_Cycle: 7
   Respawn_Scale: 1

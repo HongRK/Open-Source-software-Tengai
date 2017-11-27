@@ -37,7 +37,7 @@ public class Player_Control : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         Speed = 7f;
-        initHp = 10;
+        initHp = 100;
         hp = initHp;
         life = 5;
         BulletStack = 1;

@@ -17,6 +17,8 @@ TagManager:
   - ExplosionAnimation
   - Boss
   - EnemyLaser
+  - Final_Icon
+  - Pattern_Mark
   layers:
   - Default
   - TransparentFX

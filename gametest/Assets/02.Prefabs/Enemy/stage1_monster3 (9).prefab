@@ -379,6 +379,7 @@ MonoBehaviour:
   Boss_Laser: {fileID: 1721288741843060, guid: 6e6191a8f33ff4e49a96d604c49676d6, type: 2}
   Boss_Laser_Effect: {fileID: 1731337010096330, guid: 69ae43edbfd1ad541ba2ac10cd210df8,
     type: 2}
+  Alarm: {fileID: 1018234757539338, guid: 20892fb78f124b84c9547147862cf904, type: 2}
 --- !u!212 &212851373384718098
 SpriteRenderer:
   m_ObjectHideFlags: 1

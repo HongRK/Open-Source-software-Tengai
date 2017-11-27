@@ -89,7 +89,11 @@ public class Player_FireControl : MonoBehaviour {
 					Instantiate (Final_Effect, Player.position * 0, Quaternion.identity);
                     GameObject.Find("/Player").GetComponent<Player_Control>().SetFinalStack();
                     Debug.Log (FinalStack);
-
+                    var Final_Stack =GameObject.FindGameObjectsWithTag("Final_Icon");
+                    foreach (var FinalStack in Final_Stack)
+                    {
+                        Destroy(FinalStack);
+                    }
 					var objects = GameObject.FindGameObjectsWithTag ("EnemyMissile");
 					foreach (var enemy in objects) {
 						Destroy (enemy);

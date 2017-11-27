@@ -27,6 +27,10 @@ public class Boss_Pattern : MonoBehaviour
     public GameObject Boss_Laser_Effect;
     private float timespan;
     private float checktime;
+    private float checktime2;
+
+    public GameObject Alarm;
+    private bool Alarm_State;
     
 	void Awake()
 	{
@@ -40,10 +44,12 @@ public class Boss_Pattern : MonoBehaviour
         Arrive_State = false;
         DashState = true;
         PatternState = true;
+        Alarm_State = true;
 
         Num_BossBullet = 7;
         PatternInt = -1;
         checktime = 3f;
+        checktime2 = 0.5f;
         FireDelay = 0.3f;
         PatternDelay = 5f;
     }
@@ -90,15 +96,20 @@ public class Boss_Pattern : MonoBehaviour
 
         if (transform.position.x > 9f)
         {
-            if (timespan < checktime)
-                Debug.Log("알림");
+            if (timespan < checktime2)
+            {
+                Instantiate(Alarm, Alarm.transform.position, Alarm.transform.rotation);
+                
+            }
             if (timespan > checktime)
             {
+                
                 if (GameObject.FindGameObjectWithTag("EnemyLaser") == null)
                 {
                     Instantiate(Boss_Laser, Boss_Laser.transform.position, Boss_Laser.transform.rotation);
                     Instantiate(Boss_Laser_Effect, Boss_Laser_Effect.transform.position, Boss_Laser.transform.rotation);
                     timespan = 0;
+                   
                 }
             }
         }

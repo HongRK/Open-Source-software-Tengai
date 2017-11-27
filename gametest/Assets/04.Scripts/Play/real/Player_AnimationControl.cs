@@ -14,6 +14,7 @@ public class Player_AnimationControl : MonoBehaviour {
         var short_animation = GameObject.FindGameObjectsWithTag("ShortAttackAnimation");
         var explosion_animation = GameObject.FindGameObjectsWithTag("ExplosionAnimation");
         var short_missile = GameObject.FindGameObjectsWithTag("PlayerShortMissile");
+        var Pattern_Mark = GameObject.FindGameObjectsWithTag("Pattern_Mark");
         foreach (var finalani in final_animation)
         {
             Destroy(finalani, 1.5f);
@@ -30,5 +31,10 @@ public class Player_AnimationControl : MonoBehaviour {
         {
             Destroy(shortmissile, 0.5f);
         }
+        foreach(var PatternMark in Pattern_Mark)
+        {
+            Destroy(PatternMark, 1.0f);
+        }
+        
     }
 }

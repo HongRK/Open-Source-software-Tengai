@@ -1128,6 +1128,7 @@ MonoBehaviour:
   ScoreText: {fileID: 1979499442}
   PauseText: {fileID: 186854562}
   hp_Bar: {fileID: 216088050}
+  Final_Icon: {fileID: 1390582575086632, guid: ee760887a6a9d0145ba67177188ef93a, type: 2}
 --- !u!1 &1271460439
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,10 @@ public class Manager : MonoBehaviour
     private bool Pause_state = false;
     public Slider hp_Bar;
 
+    public GameObject Final_Icon;
+    
+    private int Final_Stack;
+
 
     private int life;
     private int score;
@@ -48,8 +52,10 @@ public class Manager : MonoBehaviour
     private void Update()
     {
         life = GameObject.Find("/Player").GetComponent<Player_Control>().GetLife();
+        Final_Stack = GameObject.Find("/Player").GetComponent<Player_Control>().GetFinalStack();
         Puase();
         GameOver();
+        Show_Final_Stack();
         LifeText.text = "LIFE : " + life.ToString("00");
         ScoreText.text = "SCORE : " + score.ToString("000000");
 
@@ -94,4 +100,16 @@ public class Manager : MonoBehaviour
         if (life == 0)
             SceneManager.LoadScene("End");
     }
+
+    private void Show_Final_Stack()
+    {   
+
+        Vector3 position = Final_Icon.transform.position;
+        for(int i=0; i<Final_Stack; i++)
+        {
+            position = new Vector3(position.x + 1, position.y, position.z);
+            Instantiate(Final_Icon, position, Final_Icon.transform.rotation);
+        }
+    }
+
 }
