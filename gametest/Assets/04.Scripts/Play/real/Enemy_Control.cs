@@ -27,7 +27,7 @@ public class Enemy_Control : MonoBehaviour {
         
         if (hp <= 0)
         {
-            GameObject.Find("/GameManager").GetComponent<Manager>().SetScore_Boss();
+            GameObject.Find("/GameManager").GetComponent<Manager>().SetScore();
             Instantiate(effect, tr.position, Quaternion.identity);
             Destroy(this.gameObject);
         }

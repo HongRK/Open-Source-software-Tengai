@@ -30,6 +30,10 @@ public class Manager : MonoBehaviour
 
     public void SetScore_Boss()
     {
+        score += 1000;
+    }
+    public void SetScore()
+    {
         score += 100;
     }
     public int GetScore()
@@ -39,7 +43,7 @@ public class Manager : MonoBehaviour
     private void Awake()
     {
         TimeSpan = 0.0f;
-        CheckTime = 3.0f;
+        CheckTime = 15.0f;
         Boss_State = true;
         hp_Bar.transform.localScale = new Vector3(0, 1, 1);
         Screen.sleepTimeout = SleepTimeout.NeverSleep; // 핸드폰 화면 안꺼지게

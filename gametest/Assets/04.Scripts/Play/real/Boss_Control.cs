@@ -34,6 +34,7 @@ public class Boss_Control : MonoBehaviour
             GameObject.Find("/GameManager").GetComponent<Manager>().SetScore_Boss();
             Instantiate(effect, tr.position, Quaternion.identity);
 			Destroy(this.gameObject);
+            
 		}
 	}
 }

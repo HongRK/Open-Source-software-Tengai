@@ -33,7 +33,7 @@ public class Player_AnimationControl : MonoBehaviour {
         }
         foreach(var PatternMark in Pattern_Mark)
         {
-            Destroy(PatternMark, 1.0f);
+            Destroy(PatternMark, 0.5f);
         }
         
     }

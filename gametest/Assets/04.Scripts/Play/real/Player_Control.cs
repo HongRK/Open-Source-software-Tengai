@@ -36,10 +36,10 @@ public class Player_Control : MonoBehaviour
     private void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player").transform;
-        Speed = 7f;
-        initHp = 100;
+        Speed = 10f;
+        initHp = 25;
         hp = initHp;
-        life = 5;
+        life = 10;
         BulletStack = 1;
         FinalStack = 3;
         Respawn = new Vector3(-25, 0, 0);
@@ -105,6 +105,8 @@ public class Player_Control : MonoBehaviour
             hp -= 2;
 		if (coll.CompareTag ("Boss"))
 			hp -= 5;
+        if (coll.CompareTag("EnemyLaser"))
+            hp -= 7;
         if (coll.CompareTag("Item"))
         {
             BulletStack++;
@@ -127,6 +129,7 @@ public class Player_Control : MonoBehaviour
 			FinalStack = 3;
  
         }
+
     }
 		
 

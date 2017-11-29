@@ -5,11 +5,11 @@ using UnityEngine;
 public class Bullet_AI : MonoBehaviour {
     private GameObject player;
     public GameObject bullet;
-    float speed;
+    private float speed;
 
     void Awake () {
         player = GameObject.Find("Player");
-        speed = 9.0f;
+        speed = 7.0f;
     }
 	
 	void Update () {

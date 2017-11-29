@@ -48,10 +48,10 @@ public class Boss_Pattern : MonoBehaviour
 
         Num_BossBullet = 7;
         PatternInt = -1;
-        checktime = 3f;
-        checktime2 = 0.5f;
+        checktime = 3.0f;
+        checktime2 = 2.5f;
         FireDelay = 0.3f;
-        PatternDelay = 5f;
+        PatternDelay = 4f;
     }
     void Update()
 	{
@@ -96,7 +96,7 @@ public class Boss_Pattern : MonoBehaviour
 
         if (transform.position.x > 9f)
         {
-            if (timespan < checktime2)
+            if (timespan > checktime2 && timespan < checktime)
             {
                 Instantiate(Alarm, Alarm.transform.position, Alarm.transform.rotation);
                 
