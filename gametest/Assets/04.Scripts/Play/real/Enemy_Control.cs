@@ -12,7 +12,7 @@ public class Enemy_Control : MonoBehaviour {
 
     private void Awake()
     {
-        hp = 5;
+        hp = 2;
         destroyXpos = -14;
         destroyYpos = -7f;
     }

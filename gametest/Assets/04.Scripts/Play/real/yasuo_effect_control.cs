@@ -7,7 +7,7 @@ public class yasuo_effect_control : MonoBehaviour
 
     private void Awake()
     {
-        Speed = 7f;
+        Speed = 10f;
     }
     void Update()
 	{

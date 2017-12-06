@@ -30,7 +30,7 @@ public class Boss_Pattern : MonoBehaviour
     private float checktime2;
 
     public GameObject Alarm;
-    private bool Alarm_State;
+    
     
 	void Awake()
 	{
@@ -44,11 +44,11 @@ public class Boss_Pattern : MonoBehaviour
         Arrive_State = false;
         DashState = true;
         PatternState = true;
-        Alarm_State = true;
+        
 
         Num_BossBullet = 7;
         PatternInt = -1;
-        checktime = 3.0f;
+        checktime = 4.0f;
         checktime2 = 2.5f;
         FireDelay = 0.3f;
         PatternDelay = 4f;
